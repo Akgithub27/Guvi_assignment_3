@@ -13,7 +13,7 @@ public class Library {
             this.books[count]=book;
             count++;
         }else{
-            System.out.println("BookManagementSystem.Library is full");
+            System.out.println("Library is full");
         }
     }
 
@@ -32,7 +32,7 @@ public class Library {
                 return obj.toString();
             }
         }
-        return "BookManagementSystem.Book is not available or you had entered wrong book ID";
+        return "Book is not available or you had entered wrong book ID";
     }
 
     public void replaceBook(int bookId,Book book){
@@ -44,6 +44,6 @@ public class Library {
                 this.books[i].setAvailable(book.isAvailable());
             }
         }
-        System.out.println("BookManagementSystem.Book replaced successfully");
+        System.out.println("Book replaced successfully");
     }
 }

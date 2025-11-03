@@ -20,7 +20,7 @@ public class BookManagementSystem {
 
         library.displayAllBooks();
 
-        System.out.println("BookManagementSystem.Book that you searched : "+library.searchBook(1004));
+        System.out.println("Book that you searched : "+library.searchBook(1004));
 
         library.replaceBook(1003,replaceBook);
 

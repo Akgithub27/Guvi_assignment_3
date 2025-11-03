@@ -53,7 +53,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return "BookManagementSystem.Book{" +
+        return "Book{" +
                 "bookID=" + bookID +
                 ", title='" + title + '\'' +
                 ", author='" + author + '\'' +
