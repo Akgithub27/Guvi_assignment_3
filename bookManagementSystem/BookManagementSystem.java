@@ -1,4 +1,4 @@
-package BookManagementSystem;
+package bookManagementSystem;
 
 public class BookManagementSystem {
     public static void main(String[] args) {
@@ -23,6 +23,10 @@ public class BookManagementSystem {
         System.out.println("Book that you searched : "+library.searchBook(1004));
 
         library.replaceBook(1003,replaceBook);
+
+        library.displayAllBooks();
+
+        library.removeBook(1002);
 
         library.displayAllBooks();
     }

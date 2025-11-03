@@ -1,4 +1,4 @@
-package BookManagementSystem;
+package bookManagementSystem;
 
 public class Library {
     Book books[];
@@ -21,7 +21,12 @@ public class Library {
         System.out.println("========================================================================================");
         System.out.println("List of books");
         for(Book obj: this.books){
-            System.out.println(obj.toString());
+            if(obj!=null){
+                System.out.println(obj.toString());
+            }else{
+                System.out.println("Book is removed by management");
+            }
+
         }
         System.out.println("========================================================================================");
     }
@@ -36,14 +41,25 @@ public class Library {
     }
 
     public void replaceBook(int bookId,Book book){
-        for(int i=0;i<this.books.length;i++){
-            if(this.books[i].getBookID() == bookId){
-                this.books[i].setBookID(bookId);
-                this.books[i].setAuthor(book.getAuthor());
-                this.books[i].setTitle(book.getTitle());
-                this.books[i].setAvailable(book.isAvailable());
+        for(Book obj: this.books){
+            if(obj.getBookID() == bookId){
+                obj.setBookID(bookId);
+                obj.setAuthor(book.getAuthor());
+                obj.setTitle(book.getTitle());
+                obj.setAvailable(book.isAvailable());
             }
         }
         System.out.println("Book replaced successfully");
+    }
+
+    public void removeBook(int bookId){
+        int index=0;
+        for(Book obj: this.books){
+            if(obj.getBookID() == bookId){
+                this.books[index] = null;
+            }
+            index++;
+        }
+        System.out.println("Book removed");
     }
 }
